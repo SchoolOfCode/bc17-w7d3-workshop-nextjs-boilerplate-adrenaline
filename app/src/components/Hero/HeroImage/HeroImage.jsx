@@ -1,15 +1,14 @@
-
-import styles from './HeroImage.module.css'
-import Image from 'next/image'
+import styles from './HeroImage.module.css';
+import Image from 'next/image';
 
 const HeroImage = () => {
     return (
         <Image
-        src="/images/hero-desktop.png"
+        src="/hero-mobile.png"
         alt="Cozy living room with a fireplace"
         className={styles.heroImage}
-        width={200}
-        height={200}
+        width={704}
+        height={636}
       />
     )
 }
