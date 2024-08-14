@@ -15,8 +15,8 @@ const Header = () => {
       <button onClick={handleClick}> Menu Toggle </button>
       <nav className={menuStatus ? styles.show : styles.hide}>
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Meet The Founders</a></li>
+          <li><a href="http://localhost:3000">Home</a></li>
+          <li><a href="http://localhost:3000/founders">Meet The Founders</a></li>
         </ul>
       </nav>
     </header>
