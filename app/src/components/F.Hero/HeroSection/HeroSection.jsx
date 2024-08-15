@@ -5,7 +5,6 @@ const HeroSection = () => {
   return (
     <section className={styles.heroSection}>
       <HeroDescription />
-      <HeroImage />
     </section>
   );
 };

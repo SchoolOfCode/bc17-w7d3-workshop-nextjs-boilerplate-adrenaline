@@ -1,5 +1,6 @@
 
 import styles from './HeroDescription.module.css'
+import HeroImage from '../HeroImage/HeroImage'
 
 const HeroDescription = () => {
     return (
@@ -12,6 +13,7 @@ const HeroDescription = () => {
         <p className={styles.names}>
           Mike and Mandy
         </p>
+        <HeroImage />
       </div>
     )
 }

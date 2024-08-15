@@ -6,7 +6,6 @@ const Main = () => {
   return (
     <main>
       <HeroSection />
-      <Separator />
       <HowItWorksSection />
     </main>
   );

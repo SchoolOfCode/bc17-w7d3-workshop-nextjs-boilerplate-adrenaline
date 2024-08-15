@@ -34,6 +34,8 @@ const HowItWorksSection = () => {
             altText={article.altText}
             title={article.title}
             description={article.description}
+            width = {700}
+            height = {400}
           />
         ))}
       </div>
