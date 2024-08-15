@@ -12,10 +12,10 @@ const Header = () => {
   return (
     <header className={styles.headerContainer}>
       <h1 className={styles.title}>🔥 Fireplace Palace</h1>
-      <button onClick={handleClick}> Menu Toggle </button>
+      <button className ={styles.menu} onClick={handleClick}> Menu Toggle </button>
       <nav className={menuStatus ? styles.show : styles.hide}>
         <ul>
-          <li><a href="http://localhost:3000">Home</a></li>
+          <li><a href="http://localhost:3000/">Home</a></li>
           <li><a href="http://localhost:3000/founders">Meet The Founders</a></li>
         </ul>
       </nav>

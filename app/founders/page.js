@@ -1,5 +1,7 @@
+import Main from "../src/components/F.Main/Main"
+
 export default function Founders() {
     return (
-        <h1>Founders</h1>
+        <><Main /></>
     )
 }
