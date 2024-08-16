@@ -21,6 +21,8 @@
 
 .reviewsDesc {
     font-weight: 500;
+    padding: 1px 25px;
+    margin-bottom: 5px;
 }
 
 .reviewsSeparator {
@@ -28,4 +30,10 @@
     width: 90%;
 }
 
-
+.reviewExample {
+    background-color: hsla(51, 8%, 82%, 0.477);
+    padding: 10px 25px;
+    margin: 20px;
+    border-radius: 10px;
+    font-weight: 500;
+}

@@ -14,12 +14,11 @@ export default function Reviews() {
 
         <p className={styles.reviewsDesc}>We've got thousands of happy customers all over the UK. Choose your country to see the latest review:</p>
 
-        <button className={styles.reviewsButton} onClick={() => setResourceType('england')}>England</button>
-        <button className={styles.reviewsButton} onClick={() => setResourceType('wales')}>Wales</button>
-        <button className={styles.reviewsButton} onClick={() => setResourceType('scotland')}>Scotland</button>
+        <button className={styles.reviewsButton} onClick={() => setResourceType('"This is England actually a longer description and I need to check if it scales properly bla bla bla some more text we couldnt be more proud and blown away 😊🏆"')}>England</button>
+        <button className={styles.reviewsButton} onClick={() => setResourceType('"This is Wales actually a longer description and I need to check if it scales properly bla bla bla some more text we couldnt be more proud and blown away 😊🏆"')}>Wales</button>
+        <button className={styles.reviewsButton} onClick={() => setResourceType('"This is Scotland actually a longer description and I need to check if it scales properly bla bla bla some more text we couldnt be more proud and blown away 😊🏆"')}>Scotland</button>
       </div>
-      <h1>{resourceType}</h1>
+      <p className={styles.reviewExample}>{resourceType}</p>
     </>
   )
-
 }
