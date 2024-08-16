@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import styles from "./reviews.module.css";
 export default function Reviews() {
     const [resourceType, setResourceType] = useState(null);
-    const [reviewData, setReviewData] = useState({ text: '', author: '' });
+    const [reviewData, setReviewData] = useState(null);
     useEffect(() => {
         if (resourceType) {
             fetch(`https://seal-app-336e8.ondigitalocean.app/reviews?country=${resourceType}`)
@@ -22,10 +22,14 @@ export default function Reviews() {
                 <button className={styles.reviewsButton} onClick={() => setResourceType('wales')}>Wales</button>
                 <button className={styles.reviewsButton} onClick={() => setResourceType('scotland')}>Scotland</button>
             </div>
-            <div className={styles.reviewExample}>
-                <p>{reviewData.text}</p>
-                <p>{reviewData.author}</p>
-            </div>
+
+            {reviewData &&
+                <div className={styles.reviewExample}>
+                    <p>{reviewData.text}</p>
+                    <p>{reviewData.author}</p>
+                </div>
+            }
+
         </>
     );
 }
