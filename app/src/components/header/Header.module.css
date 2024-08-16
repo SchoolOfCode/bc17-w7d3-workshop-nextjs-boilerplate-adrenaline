@@ -22,3 +22,8 @@
 .hide {
   display: none;
 }
+
+.menu {
+  background: none;
+  border: none;
+  }
