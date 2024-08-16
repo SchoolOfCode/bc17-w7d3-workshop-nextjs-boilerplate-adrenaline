@@ -8,3 +8,8 @@
         margin-top: 40px;
       }
 }
+
+.separator {
+  border: 1px hsla(0, 0%, 86%, 0.58) solid;
+  width: 95%;
+}

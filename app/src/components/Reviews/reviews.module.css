@@ -1,0 +1,31 @@
+.reviewsButton {
+    padding: 10px 30px;
+    background-color: rgb(133, 130, 126);
+    color: white;
+    margin: 15px;
+    border: none;
+    border-radius: 3px;
+    font-family: inherit;
+}
+
+.reviewsButton:active,
+.reviewsButton:focus {
+    background-color: rgb(218, 134, 24);
+    color: black;
+}
+
+.reviewsTitle {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.reviewsDesc {
+    font-weight: 500;
+}
+
+.reviewsSeparator {
+    border: 1px hsla(0, 0%, 86%, 0.58) solid;
+    width: 90%;
+}
+
+

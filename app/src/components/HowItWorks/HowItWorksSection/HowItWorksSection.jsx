@@ -1,5 +1,6 @@
 import styles from './styles.module.css';
 import Article from '../Article/Article';
+import Separator from '../../Separator/Separator';
 
 const HowItWorksSection = () => {
 
@@ -26,7 +27,8 @@ const HowItWorksSection = () => {
   
   return (
     <section className={styles.howItWorksSection}>
-      <h2 className={styles.howItWorksText}>How It Works</h2>
+      <h2 className={styles.howItWorksText}>How it works.</h2>
+      <Separator />
       <div className={styles.tiles}>
         {articlesData.map((article, index) => (
           <Article

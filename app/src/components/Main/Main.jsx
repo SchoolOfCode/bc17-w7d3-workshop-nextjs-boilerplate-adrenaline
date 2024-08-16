@@ -8,7 +8,6 @@ const Main = () => {
     <main>
       <HeroSection />
       <Reviews />
-      <Separator />
       <HowItWorksSection />
     </main>
   );
