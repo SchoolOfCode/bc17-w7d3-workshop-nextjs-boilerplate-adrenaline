@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 export default function ContactForm() {
-    const [field, setField] = useState("");
+    const [field, setField] = useState({ name: "", postcode: "", house: "", city: "", number: "", email: "" });
 
     function handleChange(event) {
         if (event.target.name === "name") {
