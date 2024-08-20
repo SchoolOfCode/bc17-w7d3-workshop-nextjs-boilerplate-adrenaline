@@ -1,4 +1,4 @@
-import styles from './FormTitle.module.css';
+import styles from './PageTitle.module.css';
 
 const Title = () => {
     return(
