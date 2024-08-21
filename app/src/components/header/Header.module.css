@@ -3,6 +3,7 @@
   font-size: 16px;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .title {
@@ -16,7 +17,17 @@
 }
 
 .show {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the right */
+  justify-content: center; /* Center items vertically */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: orange; /* Ensure the background covers the entire viewport */
+  z-index: 1000; /* Ensure the menu is on top of other elements */
 }
 
 .hide {
@@ -26,4 +37,19 @@
 .menu {
   background: none;
   border: none;
-  }
+}
+
+.linkStyle {
+  list-style-type: none;
+}
+
+
+.links {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+}
+
+.links:hover {
+  text-decoration: underline;
+}
