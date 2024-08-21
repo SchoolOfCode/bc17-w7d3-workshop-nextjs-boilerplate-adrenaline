@@ -6,10 +6,8 @@ import { formReducer, initialFormState } from "./UseReducer";
 
 // function to handle form submission and error handling
 export default function ContactForm() {
-  // useReducer hook to manage the form state and dispatch actions to update the state
   const [formState, dispatch] = useReducer(formReducer, initialFormState);
 
-  // Handle input changes
   const handleChange = (event) => {
     const { name, value } = event.target;
     dispatch({
@@ -18,28 +16,21 @@ export default function ContactForm() {
       payload: value,
     });
     dispatch({
-      type: "SET_ERROR",
-      payload: ""
+      type: "HANDLE_ERROR",
+      payload: "",  // Clear the error when the user starts typing
     });
   };
 
-  // Handle form submission
   const handleSubmit = (event) => {
-    // Prevent the default form submission behavior which refreshes the page
     event.preventDefault();
-    // const { name, postcode, house, city, number, email } = fields = formState.fields;
-    // if any field value is empty, then display an error
     const { name, postcode, house, city, number, email } = formState.fields;
     if (!name || !postcode || !house || !city || !number || !email) {
-      // dispatch an action to update the error message in the state
-      // payload is the error message that we want to display
       dispatch({
-        type: "SET_ERROR",
-        payload: "Please fill out all fields."
+        type: "HANDLE_ERROR",
+        payload: "Please fill out all fields.",  // Set the error message
       });
       return;
     }
-    // Log the form fields if all fields are filled out correctly
     console.log(formState.fields);
   };
 
@@ -49,9 +40,7 @@ export default function ContactForm() {
         <fieldset className={styles.fieldset}>
           <legend className={styles.title}>Personal Information</legend>
 
-          <label htmlFor="name" className={styles.formLabel}>
-            Full Name
-          </label>
+          <label htmlFor="name" className={styles.formLabel}>Full Name</label>
           <input
             className={styles.input}
             type="text"
@@ -61,9 +50,7 @@ export default function ContactForm() {
             onChange={handleChange}
           />
 
-          <label htmlFor="postcode" className={styles.formLabel}>
-            Postcode
-          </label>
+          <label htmlFor="postcode" className={styles.formLabel}>Postcode</label>
           <input
             className={styles.input}
             type="text"
@@ -73,9 +60,7 @@ export default function ContactForm() {
             onChange={handleChange}
           />
 
-          <label htmlFor="house" className={styles.formLabel}>
-            House/Flat Number and Street Name
-          </label>
+          <label htmlFor="house" className={styles.formLabel}>House/Flat Number and Street Name</label>
           <input
             className={styles.input}
             type="text"
@@ -85,9 +70,7 @@ export default function ContactForm() {
             onChange={handleChange}
           />
 
-          <label htmlFor="city" className={styles.formLabel}>
-            City
-          </label>
+          <label htmlFor="city" className={styles.formLabel}>City</label>
           <input
             className={styles.input}
             type="text"
@@ -101,9 +84,7 @@ export default function ContactForm() {
         <fieldset className={styles.fieldset}>
           <legend className={styles.title}>Contact Information</legend>
 
-          <label htmlFor="number" className={styles.formLabel}>
-            Phone number
-          </label>
+          <label htmlFor="number" className={styles.formLabel}>Phone number</label>
           <input
             className={styles.input}
             type="number"
@@ -113,9 +94,7 @@ export default function ContactForm() {
             onChange={handleChange}
           />
 
-          <label htmlFor="email" className={styles.formLabel}>
-            Email
-          </label>
+          <label htmlFor="email" className={styles.formLabel}>Email</label>
           <input
             className={styles.input}
             type="email"
@@ -126,7 +105,9 @@ export default function ContactForm() {
           />
         </fieldset>
 
-        {formState.error && <p style={{ color: "red" }}>{formState.error}</p>}
+        {formState.errorStatus && (
+          <p style={{ color: "red" }}>{formState.errorStatus}</p>
+        )}
 
         <button type="submit" className={styles.button}>
           Request Design Consultation
