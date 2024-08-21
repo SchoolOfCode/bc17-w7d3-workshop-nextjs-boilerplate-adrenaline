@@ -46,10 +46,11 @@ export default function ContactForm() {
     <>
       <form className={styles.fullForm} onSubmit={handleSubmit}>
         <fieldset className={styles.fieldset}>
-
           <legend className={styles.title}>Personal Information</legend>
 
-          <label htmlFor="name" className={styles.formLabel}>Full Name</label>
+          <label htmlFor="name" className={styles.formLabel}>
+            Full Name
+          </label>
           <input
             className={styles.input}
             type="text"
@@ -59,7 +60,9 @@ export default function ContactForm() {
             onChange={handleChange}
           />
 
-          <label htmlFor="postcode" className={styles.formLabel}>Postcode</label>
+          <label htmlFor="postcode" className={styles.formLabel}>
+            Postcode
+          </label>
           <input
             className={styles.input}
             type="text"
@@ -69,7 +72,9 @@ export default function ContactForm() {
             onChange={handleChange}
           />
 
-          <label htmlFor="house" className={styles.formLabel}>House/Flat Number and Street Name</label>
+          <label htmlFor="house" className={styles.formLabel}>
+            House/Flat Number and Street Name
+          </label>
           <input
             className={styles.input}
             type="text"
@@ -79,7 +84,9 @@ export default function ContactForm() {
             onChange={handleChange}
           />
 
-          <label htmlFor="city" className={styles.formLabel}>City</label>
+          <label htmlFor="city" className={styles.formLabel}>
+            City
+          </label>
           <input
             className={styles.input}
             type="text"
@@ -93,7 +100,9 @@ export default function ContactForm() {
         <fieldset className={styles.fieldset}>
           <legend className={styles.title}>Contact Information</legend>
 
-          <label htmlFor="number" className={styles.formLabel}>Phone number</label>
+          <label htmlFor="number" className={styles.formLabel}>
+            Phone number
+          </label>
           <input
             className={styles.input}
             type="number"
@@ -103,7 +112,9 @@ export default function ContactForm() {
             onChange={handleChange}
           />
 
-          <label htmlFor="email" className={styles.formLabel}>Email</label>
+          <label htmlFor="email" className={styles.formLabel}>
+            Email
+          </label>
           <input
             className={styles.input}
             type="email"
@@ -116,8 +127,9 @@ export default function ContactForm() {
 
         {error && <p style={{ color: "red" }}>{error}</p>}
 
-        <button type="submit" className={styles.button}>Request Design Consultation</button>
-
+        <button type="submit" className={styles.button}>
+          Request Design Consultation
+        </button>
       </form>
     </>
   );

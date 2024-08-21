@@ -1,12 +1,12 @@
 import Title from "./PageTitle/PageTitle";
-import ContactForm from "./ContactForm/ContactForm";
+import ReContactForm from "./ContactForm/ContactForm";
 
 export default function Form() {
   return (
     <>
       <div className="form">
         <Title />
-        <ContactForm />
+        <ReContactForm />
       </div>
     </>
   );
