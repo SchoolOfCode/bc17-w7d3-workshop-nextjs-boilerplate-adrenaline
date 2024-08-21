@@ -1,5 +1,5 @@
 import Title from "./PageTitle/PageTitle";
-import ReContactForm from "./ContactForm/ContactForm";
+import ReContactForm from "./ReContactForm/ReContactForm";
 
 export default function Form() {
   return (
