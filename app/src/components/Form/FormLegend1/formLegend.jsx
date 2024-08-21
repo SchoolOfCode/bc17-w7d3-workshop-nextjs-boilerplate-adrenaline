@@ -44,12 +44,14 @@ export default function ContactForm() {
 
   return (
     <>
-      <form className = "form" onSubmit={handleSubmit}>
-        <fieldset>
-          <legend>Personal Information</legend>
+      <form className={styles.fullForm} onSubmit={handleSubmit}>
+        <fieldset className={styles.fieldset}>
 
-          <label htmlFor="name">Full Name</label>
+          <legend className={styles.title}>Personal Information</legend>
+
+          <label htmlFor="name" className={styles.formLabel}>Full Name</label>
           <input
+            className={styles.input}
             type="text"
             id="name"
             name="name"
@@ -57,8 +59,9 @@ export default function ContactForm() {
             onChange={handleChange}
           />
 
-          <label htmlFor="postcode">Postcode</label>
+          <label htmlFor="postcode" className={styles.formLabel}>Postcode</label>
           <input
+            className={styles.input}
             type="text"
             id="postcode"
             name="postcode"
@@ -66,8 +69,9 @@ export default function ContactForm() {
             onChange={handleChange}
           />
 
-          <label htmlFor="house">House/Flat Number and Street Name</label>
+          <label htmlFor="house" className={styles.formLabel}>House/Flat Number and Street Name</label>
           <input
+            className={styles.input}
             type="text"
             id="house"
             name="house"
@@ -75,19 +79,23 @@ export default function ContactForm() {
             onChange={handleChange}
           />
 
-          <label htmlFor="city">City</label>
+          <label htmlFor="city" className={styles.formLabel}>City</label>
           <input
+            className={styles.input}
             type="text"
             id="city"
             name="city"
             value={fields.city}
             onChange={handleChange}
-          />
+          />        
+          </fieldset>
 
-          <legend>Contact Information</legend>
+        <fieldset className={styles.fieldset}>
+          <legend className={styles.title}>Contact Information</legend>
 
-          <label htmlFor="number">Phone number</label>
+          <label htmlFor="number" className={styles.formLabel}>Phone number</label>
           <input
+            className={styles.input}
             type="number"
             id="number"
             name="number"
@@ -95,19 +103,21 @@ export default function ContactForm() {
             onChange={handleChange}
           />
 
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email" className={styles.formLabel}>Email</label>
           <input
+            className={styles.input}
             type="email"
             id="email"
             name="email"
             value={fields.email}
             onChange={handleChange}
           />
-
-          {error && <p style={{ color: "red" }}>{error}</p>}
-
-          <button type="submit">Request Design Consultation</button>
         </fieldset>
+
+        {error && <p style={{ color: "red" }}>{error}</p>}
+
+        <button type="submit" className={styles.button}>Request Design Consultation</button>
+
       </form>
     </>
   );
