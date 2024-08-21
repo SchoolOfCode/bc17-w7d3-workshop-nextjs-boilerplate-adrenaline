@@ -1,5 +1,5 @@
 import Title from "./PageTitle/PageTitle";
-import ContactForm from "./FormLegend1/formLegend";
+import ContactForm from "./ContactForm/ContactForm";
 
 export default function Form() {
   return (

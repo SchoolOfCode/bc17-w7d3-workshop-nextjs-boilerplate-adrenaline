@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import styles from "./formLegend.module.css"
+import styles from "./ContactForm.module.css";
 
 export default function ContactForm() {
   const [fields, setFields] = useState({
@@ -87,8 +87,8 @@ export default function ContactForm() {
             name="city"
             value={fields.city}
             onChange={handleChange}
-          />        
-          </fieldset>
+          />
+        </fieldset>
 
         <fieldset className={styles.fieldset}>
           <legend className={styles.title}>Contact Information</legend>
