@@ -3,7 +3,6 @@ import React, { useState, useReducer } from "react";
 import styles from "./ReContactForm.module.css";
 import { formReducer, initialFormState } from "./UseReducer";
 
-
 // function to handle form submission and error handling
 export default function ContactForm() {
   const [formState, dispatch] = useReducer(formReducer, initialFormState);
@@ -15,14 +14,33 @@ export default function ContactForm() {
       field: name,
       payload: value,
     });
+    // Clear the error when the user starts typing again
     dispatch({
       type: "HANDLE_ERROR",
-      payload: "",  // Clear the error when the user starts typing
+      payload: "",
     });
   };
 
+  // Handle submit function
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    dispatch({
+      type: "FORM_SUBMITTING",
+      payload: "Form successfully submitted."
+    });
+
+    setTimeout(() => {
+
+      dispatch({
+        type: "FORM_SUCCESS",
+        payload: "Form successfully submitted."
+      });
+
+      console.log("RANDOM MESSAGE");
+
+    }, 3000);
+
     const { name, postcode, house, city, number, email } = formState.fields;
     if (!name || !postcode || !house || !city || !number || !email) {
       dispatch({
@@ -112,6 +130,11 @@ export default function ContactForm() {
         <button type="submit" className={styles.button}>
           Request Design Consultation
         </button>
+
+        {formState.status && (
+          <p style={{ color: "green" }}>{formState.status}</p>
+        )}
+
       </form>
     </>
   );
