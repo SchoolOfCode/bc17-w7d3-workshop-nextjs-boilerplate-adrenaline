@@ -32,13 +32,14 @@ export const formReducer = (state, action) => {
         ...state,
         // Update the error message
         errorStatus: action.payload,
+        loading: false
       };
 
     // Handle submitting status
     case "FORM_SUBMITTING":
       return {
         ...state,
-        submitStatus: "submitting"
+        loading: true
       };
 
     // Handle success message

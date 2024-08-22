@@ -32,10 +32,10 @@ export default function ContactForm() {
 
     setTimeout(() => {
 
-      dispatch({
-        type: "FORM_SUCCESS",
-        payload: "Form successfully submitted."
-      });
+      // dispatch({
+      //   type: "FORM_SUCCESS",
+      //   payload: "Form successfully submitted."
+      // });
 
       console.log("RANDOM MESSAGE");
 
@@ -128,12 +128,8 @@ export default function ContactForm() {
         )}
 
         <button type="submit" className={styles.button}>
-          Request Design Consultation
+          {formState.loading ? 'Submitting' : 'Request Design Consultation'}
         </button>
-
-        {formState.status && (
-          <p style={{ color: "green" }}>{formState.status}</p>
-        )}
 
       </form>
     </>
