@@ -27,19 +27,8 @@ export default function ContactForm() {
 
     dispatch({
       type: "FORM_SUBMITTING",
-      payload: "Form successfully submitted."
+      // payload: "Form successfully submitted."
     });
-
-    setTimeout(() => {
-
-      // dispatch({
-      //   type: "FORM_SUCCESS",
-      //   payload: "Form successfully submitted."
-      // });
-
-      console.log("RANDOM MESSAGE");
-
-    }, 3000);
 
     const { name, postcode, house, city, number, email } = formState.fields;
     if (!name || !postcode || !house || !city || !number || !email) {
@@ -48,6 +37,16 @@ export default function ContactForm() {
         payload: "Please fill out all fields.",  // Set the error message
       });
       return;
+    } else {
+      setTimeout(() => {
+
+        dispatch({
+          type: "FORM_SUCCESS",
+          // payload: "Form successfully submitted.",
+        });
+        console.log("Submit successful")
+  
+      }, 3000);
     }
     console.log(formState.fields);
   };

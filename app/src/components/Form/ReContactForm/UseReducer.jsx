@@ -9,8 +9,8 @@ export const initialFormState = {
     email: "",
   },
   errorStatus: "",
-  submitStatus: "",
-  loading: false
+  submitStatus: false,
+  loading: false,
 };
 
 export const formReducer = (state, action) => {
@@ -32,7 +32,7 @@ export const formReducer = (state, action) => {
         ...state,
         // Update the error message
         errorStatus: action.payload,
-        loading: false
+        loading: false,
       };
 
     // Handle submitting status
@@ -46,7 +46,7 @@ export const formReducer = (state, action) => {
     case "FORM_SUCCESS":
       return {
         ...state,
-        submitStatus: "success"
+        submitStatus: true
       };
 
     // Default case to return the state if no action type matches
