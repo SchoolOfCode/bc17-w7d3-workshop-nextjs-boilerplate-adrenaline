@@ -6,10 +6,12 @@ const HeroDescription = () => {
         <div className={styles.heroDescription}>
         <p className={styles.heroHeadline}>
           Discover the <br />
-          perfect fireplace ...
+          perfect fireplace...
         </p>
         <p className={styles.consultationParagraph}>
-          Book consultation: <span className={styles.numberSpan}> <a href="http://localhost:3000/consultation">Here</a></span>
+          <span className={styles.numberSpan}>
+            Book consultation <a href="http://localhost:3000/consultation" className={styles.link}>here</a>.
+            </span>
         </p>
       </div>
     )

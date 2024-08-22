@@ -4,9 +4,9 @@
 }
 .heroDescription {
   background-color: #f1911b;
-  font-size: 32px;
+  font-size: 30px;
   font-weight: bold;
-  padding: 10px;
+  padding: 15px;
 }
 .consultationParagraph {
   font-size: 24px;
@@ -14,7 +14,13 @@
   padding: 0;
 }
 .numberSpan {
-  color: #fff2e4;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.link:visited {
+  color: #000;
 }
 
 @media (min-width: 1024px) {

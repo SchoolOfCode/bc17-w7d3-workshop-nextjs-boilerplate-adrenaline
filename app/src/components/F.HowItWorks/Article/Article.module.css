@@ -4,13 +4,20 @@
     align-items: center;
     text-align: center;
     padding: 10px;
+    margin-bottom: 20px;
+    margin-top: 10px;
   }
   .tileImage {
-    height: 200px;
-    width: 250px;
+    height: 50%;
+    width: 90%;
+    margin-top: 10px;
   }
   @media (min-width: 1024px){
     .tile {
       width: 30%;
     }
+  }
+
+  .title {
+    margin: 0;
   }

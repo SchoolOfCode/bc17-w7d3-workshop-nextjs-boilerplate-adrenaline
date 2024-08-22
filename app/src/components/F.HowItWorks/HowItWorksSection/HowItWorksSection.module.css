@@ -20,13 +20,7 @@
 
   .tiles {
     flex-direction: row;
-    width: 70%;
+    width: 100%;
     justify-content: space-between;
   }
-}
-
-.howItWorksText {
-  font-size: 28px;
-  font-weight: 500;
-  margin-top: 35px;
 }

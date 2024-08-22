@@ -1,6 +1,6 @@
 .reviewsButton {
     padding: 10px 30px;
-    background-color: rgb(133, 130, 126);
+    background-color: rgb(83, 83, 83);
     color: white;
     margin: 15px;
     border: none;
@@ -9,6 +9,7 @@
 }
 
 .reviewsButton:active,
+.reviewsButton:hover,
 .reviewsButton:focus {
     background-color: rgb(218, 134, 24);
     color: black;
@@ -16,7 +17,7 @@
 
 .reviewsTitle {
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .reviewsDesc {
@@ -32,8 +33,20 @@
 
 .reviewExample {
     background-color: hsla(51, 8%, 82%, 0.477);
-    padding: 10px 25px;
+    padding: 5px 30px;
     margin: 20px;
     border-radius: 10px;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.author {
+    font-size: 13px;
+    text-align: right;
+    margin-right: 25px;
+    margin-top: -10px;
+}
+
+.location {
+    color: rgb(218, 134, 24);
 }

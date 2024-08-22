@@ -15,7 +15,7 @@ export default function Reviews() {
     return (
         <>
             <div>
-                <h1 className={styles.reviewsTitle}>Trusted.</h1>
+                <h1 className={styles.reviewsTitle}>Trusted</h1>
                 <hr className={styles.reviewsSeparator} />
                 <p className={styles.reviewsDesc}>We've got thousands of happy customers all over the UK. Choose your country to see the latest review:</p>
                 <button className={styles.reviewsButton} onClick={() => setResourceType('england')}>England</button>
@@ -24,10 +24,9 @@ export default function Reviews() {
             </div>
 
             {reviewData &&
-                <div className={styles.reviewExample}>
+                <><div className={styles.reviewExample}>
                     <p>{reviewData.text}</p>
-                    <p>{reviewData.author}</p>
-                </div>
+                </div><p className={styles.author}>{reviewData.author} from <span className={styles.location}>{reviewData.location}</span></p></>
             }
 
         </>

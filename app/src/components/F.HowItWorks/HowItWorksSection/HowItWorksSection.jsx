@@ -1,4 +1,4 @@
-import styles from './styles.module.css';
+import styles from './HowItWorksSection.module.css'
 import Article from '../Article/Article';
 
 const HowItWorksSection = () => {
@@ -23,7 +23,7 @@ const HowItWorksSection = () => {
       description: "If you're not 100% satisfied we will fully refund your purchase. Also, we offer free repairs for the first 20 years of ownership. Find that somewhere else!",
     },
   ];
-  
+
   return (
     <section className={styles.howItWorksSection}>
       <div className={styles.tiles}>
@@ -34,8 +34,8 @@ const HowItWorksSection = () => {
             altText={article.altText}
             title={article.title}
             description={article.description}
-            width = {700}
-            height = {400}
+            width={article.width}
+            height={article.height}
           />
         ))}
       </div>

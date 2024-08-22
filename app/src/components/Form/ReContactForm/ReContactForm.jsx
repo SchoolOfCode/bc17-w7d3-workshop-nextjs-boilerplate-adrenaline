@@ -127,7 +127,7 @@ export default function ContactForm() {
         )}
 
         <button type="submit" className={styles.button}>
-          {formState.loading ? 'Submitting' : 'Request Design Consultation'}
+          {formState.loading ? 'Submitting...' : 'Request Design Consultation'}
         </button>
 
       </form>
@@ -136,7 +136,7 @@ export default function ContactForm() {
         <div className={styles.overlay}>
           <div>
             <p className={styles.overlayMessage}>Form submitted successfully!</p>
-            <a href="http://localhost:3000/">Return to the Homepage</a>
+            <a href="http://localhost:3000/" className={styles.overlayLink}>Return to the Homepage</a>
           </div>
         </div>
       )}

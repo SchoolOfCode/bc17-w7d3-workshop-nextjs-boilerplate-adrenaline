@@ -27,7 +27,7 @@ const HowItWorksSection = () => {
   
   return (
     <section className={styles.howItWorksSection}>
-      <h2 className={styles.howItWorksText}>How it works.</h2>
+      <h2 className={styles.howItWorksText}>How It Works</h2>
       <Separator />
       <div className={styles.tiles}>
         {articlesData.map((article, index) => (

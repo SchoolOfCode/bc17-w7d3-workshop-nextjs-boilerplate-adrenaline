@@ -12,7 +12,11 @@ const Header = () => {
 
   return (
     <header className={styles.headerContainer}>
-      <h1 className={styles.title}>🔥 Fireplace Palace</h1>
+
+      <h1 className={styles.title}>
+        <a href="http://localhost:3000/" className={styles.title}>🔥 Fireplace Palace</a>
+      </h1>
+
       <button className={styles.menu} onClick={handleClick}>
         <Image
           src="/menu-open-button.png"
@@ -22,14 +26,16 @@ const Header = () => {
           height={24}
         />
       </button>
+
       <nav className={menuStatus ? styles.show : styles.hide}>
-        <ul>
-          <li className={styles.linkStyle}>
-            <a className={styles.links} href="http://localhost:3000/">Home</a></li>
-          <li className={styles.linkStyle}>
-            <a className={styles.links} href="http://localhost:3000/founders">Meet The Founders</a></li>
-        </ul>
+
+        <div className={styles.linkStyle}>
+          <a className={styles.links} href="http://localhost:3000/">Home 🏠</a>
+          <a className={styles.links} href="http://localhost:3000/founders">Meet The Founders 👥</a>
+          <a className={styles.links} href="http://localhost:3000/consultation">Book Consultation 📝</a>
+        </div>
       </nav>
+
     </header>
   );
 };

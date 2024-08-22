@@ -36,7 +36,7 @@ const socialLinks = [
           <p>Contact us:</p>
           <address>
             <a href="mailto:info@firepalace.co.uk" className={styles.emailLink}>
-              info@firepalace.co.uk
+              info@fireplacepalace.co.uk
             </a>
           </address>
         </div>

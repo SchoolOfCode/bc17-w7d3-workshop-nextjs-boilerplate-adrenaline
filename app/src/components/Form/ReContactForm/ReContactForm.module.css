@@ -37,23 +37,11 @@
     text-decoration: none;
     font-weight: 500;
     font-family: inherit;
+    font-size: 17px;
     width: 100%;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
-
-/* .overlay {
-    position: absolute;
-    top: 45px;
-    bottom: 0;
-    width: 100vw;
-    background-color: orange;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-} */
 
 .overlay {
     position: absolute;
@@ -67,9 +55,16 @@
     align-items: center;
     z-index: 1000;
 }
-  
-  .overlayMessage {
+
+.overlayMessage {
     color: black;
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
-  }
+    margin: 15px;
+}
+
+.overlayLink {
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    text-decoration: underline;
+}
