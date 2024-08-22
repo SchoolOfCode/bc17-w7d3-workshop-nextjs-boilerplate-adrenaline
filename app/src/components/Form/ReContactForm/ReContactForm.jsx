@@ -131,6 +131,15 @@ export default function ContactForm() {
         </button>
 
       </form>
+
+      {formState.submitStatus && (
+        <div className={styles.overlay}>
+          <div>
+            <p className={styles.overlayMessage}>Form submitted successfully!</p>
+            <a href="http://localhost:3000/">Return to the Homepage</a>
+          </div>
+        </div>
+      )}
     </>
   );
 }
